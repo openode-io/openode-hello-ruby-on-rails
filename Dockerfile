@@ -28,7 +28,9 @@ RUN echo 'bundle install --jobs 20 --retry 5 --without development test' >> /usr
 RUN echo 'echo assets:precompile' >> /usr/bin/start.sh
 RUN echo 'bundle exec rake assets:precompile' >> /usr/bin/start.sh
 
+#RUN echo 'echo db:migrate' >> /usr/bin/start.sh
+#RUN echo 'bin/rails db:migrate' >> /usr/bin/start.sh
+
 # launch the application
 RUN echo 'echo starting the application' >> /usr/bin/start.sh
 RUN echo 'bundle exec puma -C config/puma.rb' >> /usr/bin/start.sh
-

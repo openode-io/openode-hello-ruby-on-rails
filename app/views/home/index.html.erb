@@ -1,7 +1,11 @@
-<p>
-  Hello world!
-  The ENV vars are as follows:
-</p>
+<p>intro text...</p>
+<table>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.content %></td>
+    </tr>
+  <% end %>
+</table>
 <pre>
 <%= debug ENV.to_h.to_yaml %>
 </pre>
