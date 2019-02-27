@@ -28,8 +28,8 @@ RUN echo 'bundle install --jobs 20 --retry 5 --without development test' >> /boo
 RUN echo 'echo assets:precompile' >> /boot.sh
 RUN echo 'bundle exec rake assets:precompile' >> /boot.sh
 
-#RUN echo 'echo db:migrate' >> /boot.sh
-#RUN echo 'bin/rails db:migrate' >> /boot.sh
+RUN echo 'echo db:migrate' >> /boot.sh
+RUN echo 'bin/rails db:migrate' >> /boot.sh
 
 # launch the application
 RUN echo 'echo starting the application' >> /boot.sh
